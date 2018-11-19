@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+ .remove-person {
+   display: inline-block;
+   background: white;
+   border: none;
+   color: red;
+   cursor: pointer;
+ }
+
+
+ .custom-form {
+   display: inline;
+
+ }

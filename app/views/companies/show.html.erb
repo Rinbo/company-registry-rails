@@ -4,6 +4,14 @@
   <strong>Name:</strong>
   <%= @company.name %>
 </p>
+<div>
+  <ul>
+  <% @company.people.each do |person| %>
+    <li><%= person.name %> |<%= render partial: 'remove_person', locals: {person: person} %></li>
+  <% end %>
+  </ul>
+</div>
 
 <%= link_to 'Edit', edit_company_path(@company) %> |
-<%= link_to 'Back', companies_path %>
+<%= link_to 'Back to companies', companies_path %> |
+<%= link_to 'Back to people', people_path %>

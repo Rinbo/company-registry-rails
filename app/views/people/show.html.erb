@@ -7,8 +7,9 @@
 
 <p>
   <strong>Company:</strong>
-  <%= @person.company %>
+  <%= @person.company.name unless @person.company.nil?%>
 </p>
 
 <%= link_to 'Edit', edit_person_path(@person) %> |
-<%= link_to 'Back', people_path %>
+<%= link_to 'Back', people_path %> | 
+<%= link_to 'Back to companies', companies_path %>

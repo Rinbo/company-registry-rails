@@ -1,4 +1,3 @@
 class Company < ApplicationRecord
-  has_many :person
-  
+  has_many :people
 end

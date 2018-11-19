@@ -1,0 +1,6 @@
+<%= form_with(model: person, local: true, class: "custom-form") do |form| %>
+
+  <%= form.hidden_field :company_id, value: nil %>  
+  <%= form.submit value: "Remove person", class: "remove-person", data: {confirm: "Are you sure?"} %>
+  
+<% end %>

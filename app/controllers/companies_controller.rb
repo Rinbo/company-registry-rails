@@ -10,6 +10,7 @@ class CompaniesController < ApplicationController
   # GET /companies/1
   # GET /companies/1.json
   def show
+    @persons = Person.where(company: @company.name)
   end
 
   # GET /companies/new
