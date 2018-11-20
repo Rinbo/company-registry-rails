@@ -37,8 +37,6 @@ class PeopleController < ApplicationController
     end
   end
 
-  # PATCH/PUT /people/1
-  # PATCH/PUT /people/1.json
   def update
     respond_to do |format|
       if @person.update(person_params)
@@ -51,8 +49,6 @@ class PeopleController < ApplicationController
     end
   end
 
-  # DELETE /people/1
-  # DELETE /people/1.json
   def destroy
     @person.destroy
     respond_to do |format|
@@ -62,12 +58,10 @@ class PeopleController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_person
       @person = Person.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def person_params
       params.require(:person).permit(:name, :company_id)
     end
